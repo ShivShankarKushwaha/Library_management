@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Ubuntu:ital,wght@1,400;1,500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- <link rel="shortcut icon" href="https://wallpapercave.com/wp/wp9257237.jpg" type="image/x-icon"> -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="/images/logo-iiitu.jpg" type="image/x-icon">
+    <title>Library Management</title>
+   
+   
+</head>
+<body>
+    <nav>
+        <div class="logo">
+            <img src="/images/logo.jpg" alt="">
+            <p> <span>IIITU</span>  Library</p>
+        </div>
+        <!-- sign in with college id -->
+        <ul>
+            <li id="btn_home" > <a href="/">Home</a> </li>
+            <!-- <li id="btn_home" onclick="home()"> Home </li> -->
+            <li id="btn_books" ><a href="/books">MY Books</a></li>
+            <!-- <li>About Us</li> -->
+            <li id="btn_search" ><a href="/search">Search Books</a></li>
+            <li id="btn_sign" ><a href="/sign">Sign Up</a></li>
+            <li id="btn_login" ><a href="/login">Log In</a></li>
+        </ul>
+    </nav>
+
+    <div class="space">
+
+    </div>
+
+    <div class="welcome">
+        <!-- <h2>Welcome !</h2> -->
+        <h2>Welcome to the IIITU online Library</h2>
+        <h5>Read More Spend Less</h5>
+    </div>
+    <div class="login" id="login">
+        <form action="/login" method="post">
+            <center>
+
+                <h1>Log In</h1>
+            </center>
+            <div>
+                <!-- <label for="email-check">E-mail :</label> -->
+                <input type="email" name="email" id="email2" placeholder="Enter registered email" required>
+            </div>
+            <div>
+                <!-- <label for="password-check">Password :</label> -->
+                <input type="password" name="password" id="pass2" placeholder="Enter Your password" required>
+            </div>
+            <!-- <span id="message" style="display: none;"></span> -->
+            
+            <div id="log-submit">
+                <input type="submit" value="Submit" id="submit2">
+                <input type="reset" value="Reset" id="reset2">
+                <a href="/forgetpass" id="forgetpass">Forget Password?</a>
+            </div>
+        </form>
+    </div>
+    <!-- <div id="black"></div> -->
+    <footer>
+        <h2>IIITU library</h2>
+        
+        <h5>Contact officials</h5> 
+        <h5 style="font-size:4rem ;color: blue;"><a href="https://mail.google.com/mail/?view=cm&fs=1&to=director@iiitu.ac.in"target="_blank">director@iiitu.ac.in </a>  </h5>
+
+        <div class="social">
+            <a href="https://www.instagram.com/iiituna_/"target="_blank"> <i class="fab fa-3x fa-instagram"></i> </a>
+            <a href="https://www.facebook.com/iiituna.ac.in/"target="_blank"> <i class="fab fa-3x fa-facebook"></i> </a>
+            <a href="https://twitter.com/iiituna"target="_blank"> <i class="fab fa-3x fa-twitter"></i> </a>
+            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=director@iiitu.ac.in"target="_blank"> <i class="fa-solid fa-3x fa-square-envelope"></i> </a>
+        </div>
+    </footer>
+</body>
+<script>
+    async function resetpass()
+    {
+        let email = await document.getElementById("email2").value;
+        // let message =await document.getElementById("message");
+        if(email=="")
+        {
+            alert("E-mail is necessary");
+        }
+        else
+        {
+            // message.style.display="none";
+        }
+        setInterval( resetpass, 4000);
+    }
+    
+    
+    
+</script>
+</html>

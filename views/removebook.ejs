@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Ubuntu:ital,wght@1,400;1,500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+        integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- <link rel="shortcut icon" href="https://wallpapercave.com/wp/wp9257237.jpg" type="image/x-icon"> -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="/images/logo-iiitu.jpg" type="image/x-icon">
+    <title>Library Management</title>
+    <style>
+        .addbookcontainer
+        {
+            padding-top: 5rem;
+            width: 100%;
+            height: 70rem;
+            /* background-color: white; */
+            color: black;
+            font-size: 5rem;
+            place-self: center;
+            display: grid;
+            place-self: center;
+            place-content: center;
+            text-align: center;
+            /* margin: 1rem 40rem; */
+            border-radius: 4rem;
+            text-align: center;
+            margin-top: 3rem;
+        }
+        form{
+            display: grid;
+            place-content: center;
+            width: 100rem;
+            border: .2rem solid black;
+            padding: .5rem 1rem;
+            background-color: white;
+            border-radius: 5rem;
+            height: 70rem;
+        }
+        form input{
+            width: 97%;
+            background-color: white;
+            outline:invert;
+            height: 5rem;
+            padding:.5rem;
+            color: black;
+            font-size: 4rem;
+            text-align: center;
+            /* margin-top: 2rem; */
+            /* margin-bottom: 3rem; */
+        }
+        #referencecheck{
+            display: flex;
+            flex-direction: row;
+            margin-top: 5rem;
+        }
+        #referencecheck input{
+            width: 10rem;
+            margin: 1rem;
+            margin-left: 1rem;
+            padding: 1rem;
+        }
+        #message{
+            height: 8rem;
+            display: none;
+        }
+        #availability{
+            margin: 2rem .5rem;
+            cursor: pointer;
+            background-color: blue;
+            color: white;
+        }
+        #add{
+            margin: 2rem 0.5rem;
+            cursor: pointer;
+            background-color: green;
+            color: white;
+            height: 7rem;
+        }
+        #reset{
+            margin: 2rem 0.5rem;
+            cursor: pointer;
+            background-color: red;
+            height: 7rem;
+        }
+    </style>
+
+
+</head>
+<body>
+    <nav>
+        <div class="logo">
+            <img src="/images/logo.jpg" alt="">
+            <p> <span>IIITU</span> Library</p>
+        </div>
+        <!-- sign in with college id -->
+        <ul>
+            <!-- <li id="btn_home" onclick="home()"> Home </li> -->
+            <!-- <li id="btn_books"><a href="/books">MY Books</a></li> -->
+            <!-- <li>About Us</li> -->
+            <!-- <li id="btn_search"><a href="/search">Search Books</a></li> -->
+            <!-- <li id="btn_sign"><a href="/sign">Sign Up</a></li> -->
+            <!-- <li id="btn_login"><a href="/login">Log In</a></li> -->
+            <li id="btn_addbook"><a href="/addbooks">Add Books</a></li>
+            <li id="btn_addbook"><a href="/removebooks">Remove Books</a></li>
+            <li id="btn_addbook"><a href="/seeaccount">See an account</a></li>
+            <li id="btn_return"><a href="/returnBook">Return Book</a></li>
+            <li id="btn_home"> <a href="/logout">Log Out</a> </li>
+            <!-- <li style="color:gold;">Logged in</li> -->
+        </ul>
+    </nav>
+
+    <div class="space"></div>
+    <div class="addbookcontainer">
+        <form action="/removebook" method="post">
+
+            <h2>Remove Books Here</h2><br>
+            <input type="text" name="id" required placeholder="Enter Book id"><br>
+            <input type="submit" value="Remove It" id="add">
+            <input type="reset" value="Reset" id="reset">
+        </form>
+    </div>
+</body>
+<script>
+    let num =0;
+    if(num==0)
+    {
+        window.reload();
+        num++;
+    }
+</script>
+</html>
